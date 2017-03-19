@@ -1,0 +1,6 @@
+Topics will be covered
+
+1. A bit on scope
+2. var keyword
+3. let keyword
+4. const keyword

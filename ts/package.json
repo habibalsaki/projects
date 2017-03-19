@@ -1,7 +1,7 @@
 {
-  "name": "cat-clicker",
+  "name": "ts",
   "version": "1.0.0",
-  "description": "a demo js project",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +9,12 @@
   },
   "author": "habib al saki",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jquery": "^3.1.1",
+  "devDependencies": {
+    "@types/jquery": "^2.0.40",
     "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "systemjs": "^0.20.9"
   }
 }

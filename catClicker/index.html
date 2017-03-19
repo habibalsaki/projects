@@ -5,11 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cat Clicker</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 </head>
 <body>
+  <ul id="batList">
 
-  <img src="img/bat.jpg" alt="image of bat" id="batImg">
-  <p>Clicked <span id="clickNo"></span> times </p>
+  </ul>
+  <div id="bat">
+    <h4 id="bat-name"></h4>
+    <img src="" alt="" id="bat-image">
+    <p id="bat-clicked"></p>
+  </div>
+
+  <button id="admin">Admin</button>
+  <div id="admin-panel">
+    <p><input type="text" id="new-bat-name"></p>
+    <p><input type="text" id="new-bat-click"></p>
+    <button id="cancel">Cancel</button>
+    <button id="save">Save</button>
+  </div>
+  
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
