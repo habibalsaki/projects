@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
+import { PostService } from './post.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,9 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

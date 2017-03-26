@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 import { Checkpassword } from '../checkpassword';
+import 'rxjs/add/operator/debouncetime';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-contact-form',
@@ -21,6 +23,12 @@ export class ContactFormComponent implements OnInit {
             newpassword2: ['', Validators.required]
           },{validator: Checkpassword.isSamePassword})    
       });
+
+      let search = this.signUpForm.controls['oldpassword'];
+      search.valueChanges.debounceTime(400)
+                          .map(str => (<string>str).replace(' ','-'))
+                          .subscribe(x => console.log(x));
+
   }
 
   ngOnInit() {
