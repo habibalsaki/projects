@@ -1,33 +1,39 @@
+import { UserService } from './user/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { HomeComponent } from './home/home.component';
+import { NavBarComponentComponent } from './nav-bar-component/nav-bar-component.component';
 import { UserComponent } from './user/user.component';
 import { PostComponent } from './post/post.component';
 
-import { routing } from './app.routing';
+import {AppRoutingModule} from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { CreateUserComponent } from './user/create-user/create-user.component';
 
-import { UserService } from './user/user.service';
+import { ValidationService } from './validation.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    HomeComponent,
+    NavBarComponentComponent,
     UserComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent,
+    NotFoundComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
-    routing
+    AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [UserService, ValidationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

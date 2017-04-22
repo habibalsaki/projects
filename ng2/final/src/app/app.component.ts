@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavBarComponentComponent } from './nav-bar-component/nav-bar-component.component';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,4 @@ import { NavigationComponent } from './navigation/navigation.component';
 })
 export class AppComponent {
   title = 'app works!';
-
-  constructor(private route: ActivatedRoute){
-    
-  }
-
-  
 }

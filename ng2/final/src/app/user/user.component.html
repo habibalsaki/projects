@@ -1,22 +1,16 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>User Works</h1>
-    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-  </div>
-  <h4>User List</h4><hr>
-  <table class="table table-bordered">
-    <tr>
-      <th>Name:</th>
-      <th>Email:</th>
-      <th>Edit:</th>
-      <th>Delete:</th>
-    </tr>
-    <tr *ngFor="let user of userList">
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
-      <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-      <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
-    </tr>
-  </table>
-</div>
+<h1>User</h1>
+<a routerLink="create" class="btn btn-primary">Add User</a>
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let data of tableData">
+    <td>{{ data.name }}</td>
+    <td>{{ data.email }}</td>
+    <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+    <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+  </tr>
+</table>
