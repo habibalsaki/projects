@@ -1,3 +1,5 @@
+import { PreventNavigation } from './preventNavigation.service';
+import { AuthGurad } from './auth-guard.service';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,7 +9,8 @@ import { NotFoundComponent } from './not-found.component';
 
 import { MessagesModule } from './messages/messages.module'; 
 import { PhotosModule } from './photos/photos.module';
-import {routing} from './app.routing';
+
+import { routing } from './app.routing';
 
 @NgModule({
   imports: [
@@ -21,6 +24,7 @@ import {routing} from './app.routing';
     HomeComponent,
     NotFoundComponent
   ],
+  providers: [AuthGurad, PreventNavigation],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

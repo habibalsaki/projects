@@ -9,29 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var photos_component_1 = require('./photos.component');
-var photo_details_component_1 = require('./photo-details.component');
-var photos_routing_1 = require('./photos.routing');
-var PhotosModule = (function () {
-    function PhotosModule() {
+var AuthGurad = (function () {
+    function AuthGurad() {
     }
-    PhotosModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                photos_component_1.PhotosComponent,
-                photo_details_component_1.PhotoDetailsComponent,
-            ],
-            imports: [
-                photos_routing_1.routing
-            ],
-            exports: [
-                photos_component_1.PhotosComponent,
-                photo_details_component_1.PhotoDetailsComponent
-            ]
-        }), 
+    AuthGurad.prototype.canActivate = function () {
+        return false;
+    };
+    AuthGurad = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], PhotosModule);
-    return PhotosModule;
+    ], AuthGurad);
+    return AuthGurad;
 }());
-exports.PhotosModule = PhotosModule;
-//# sourceMappingURL=photos.module.js.map
+exports.AuthGurad = AuthGurad;
+//# sourceMappingURL=auth-guard.service.js.map

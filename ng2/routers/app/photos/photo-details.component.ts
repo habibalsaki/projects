@@ -6,18 +6,17 @@ import { ActivatedRoute } from '@angular/router';
     template: `<h1>Photo Details {{ id }}</h1>
     `
 })
-export class PhotoDetailsComponent implements OnInit, OnDestroy{
-    id;
-    subscription;
+export class PhotoDetailsComponent implements OnInit, OnDestroy {
 
-    constructor(private _route: ActivatedRoute){
+    private id: number;
+    private subscription: any;
 
-    }
+    constructor(private _route: ActivatedRoute){}
 
     ngOnInit(){
         this.subscription = this._route.params.subscribe(params => {
             this.id = +params["id"];
-        });
+        })
     }
 
     ngOnDestroy(){

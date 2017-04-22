@@ -8,6 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var preventNavigation_service_1 = require('./preventNavigation.service');
+var auth_guard_service_1 = require('./auth-guard.service');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
@@ -32,6 +34,7 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 not_found_component_1.NotFoundComponent
             ],
+            providers: [auth_guard_service_1.AuthGurad, preventNavigation_service_1.PreventNavigation],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
