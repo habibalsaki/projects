@@ -1,6 +1,8 @@
+import { HasUnsavedData} from './../../guards/hasUnsavedData.service';
 import { ValidationService } from './../../validation.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-create-user',
@@ -9,7 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CreateUserComponent implements OnInit {
 
-  private userForm: FormGroup;
+  
+  userForm: FormGroup;
+  
 
   constructor(private formBuilder: FormBuilder, private vldService: ValidationService) { }
 
@@ -33,6 +37,7 @@ export class CreateUserComponent implements OnInit {
             zipcode: []
         })
     });
+    
   }
 
   submitForm(ev){

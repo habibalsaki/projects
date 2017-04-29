@@ -15,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 
 import { ValidationService } from './validation.service';
+import { HasUnsavedData } from './guards/hasUnsavedData.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { ValidationService } from './validation.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UserService, ValidationService],
+  providers: [UserService, ValidationService, HasUnsavedData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
