@@ -1,3 +1,34 @@
-<p>
-  post works!
-</p>
+
+<h1>Posts</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <select class="form-control" #user (change)="reloadPosts({userId: user.value})">
+        <option value="">Select an user
+        </option>
+        <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}</option>
+      </select>
+      <ul class="list-group posts">
+        <spinner [isLoading]="isLoading"></spinner>
+        <pagination [item]="posts" [page-size]="pageSize" (page-changed)="changePage($event)"></pagination>
+        <li *ngFor="let post of pagedPosts" class="list-group-item" (click)="showPost(post)">
+          {{post.title}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-6" *ngIf="singlePostTitle">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" *ngIf="singlePostTitle">{{singlePostTitle}}</h3>
+          </div>
+          <div class="panel-body" *ngIf="singlePostBody">
+            {{singlePostBody}}
+          </div>
+        </div>
+
+        <comment [postId]="singlePostId"></comment>
+
+    </div>
+  </div>
+</div>

@@ -1,22 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 well">
-      <h1>Add an User</h1>
+      <h1>{{title}}</h1>
       <form [formGroup]="userForm" (ngSubmit)="submitForm(userForm)">
         <fieldset formGroupName="basic">
           <legend>Info</legend>
           <div class="form-group">
             <label for="nameInput">Name</label>
-            <input type="text" class="form-control" id="nameInput" placeholder="Name" formControlName="name">
+            <input type="text" class="form-control" id="nameInput" 
+              placeholder="Name" [(ngModel)]="user.name"
+              formControlName="name">
           </div>
+          
           <div *ngIf="userForm.controls.basic.controls.name.touched 
-                && userForm.controls.basic.controls.name.errors">
+              && userForm.controls.basic.controls.name.errors">
               <div *ngIf="userForm.controls.basic.controls.name.errors.required">  
                 <div class="alert alert-dismissible alert-danger">
                   <strong>Username is required</strong>
                 </div>
               </div>
-              <div *ngIf="userForm.controls.basic.controls.name.errors.cannotBeSmallerThanFiveChars">  
+              <div *ngIf="userForm.controls.basic.controls.name.errors?.cannotBeSmallerThanFiveChars">  
                 <div class="alert alert-dismissible alert-danger">
                   <strong>Username must be greater than 5 characters.</strong>
                 </div>
@@ -24,7 +27,7 @@
           </div>
           <div class="form-group">
             <label for="emailInput">Email</label>
-            <input type="email" class="form-control" id="emailInput" placeholder="Email" formControlName="email">
+            <input type="email" [(ngModel)]="user.email" class="form-control" id="emailInput" placeholder="Email" formControlName="email">
           </div>
           <div *ngIf="userForm.controls.basic.controls.email.touched 
                 && userForm.controls.basic.controls.email.errors">
@@ -41,26 +44,26 @@
           </div>
           <div class="form-group">
             <label for="phoneInput">Phone</label>
-            <input type="text" class="form-control" id="phoneInput" placeholder="Phone" formControlName="phone">
+            <input type="text" [(ngModel)]="user.phone" class="form-control" id="phoneInput" placeholder="Phone" formControlName="phone">
           </div>
         </fieldset>
         <fieldset formGroupName="address">
           <legend>Address</legend>
           <div class="form-group">
             <label for="streetInput">Street</label>
-            <input type="text" class="form-control" id="streetInput" placeholder="Street" formControlName="street">
+            <input type="text" [(ngModel)]="user.address.street" class="form-control" id="streetInput" placeholder="Street" formControlName="street">
           </div>
           <div class="form-group">
             <label for="suiteInput">Suite</label>
-            <input type="text" class="form-control" id="suiteInput" placeholder="Suite" formControlName="suite">
+            <input type="text" [(ngModel)]="user.address.suite" class="form-control" id="suiteInput" placeholder="Suite" formControlName="suite">
           </div>
           <div class="form-group">
             <label for="cityInput">City</label>
-            <input type="text" class="form-control" id="cityInput" placeholder="City" formControlName="city">
+            <input type="text" [(ngModel)]="user.address.city" class="form-control" id="cityInput" placeholder="City" formControlName="city">
           </div>
           <div class="form-group">
             <label for="zipcodeInput">Zipcode</label>
-            <input type="text" class="form-control" id="zipcodeInput" placeholder="Zipcode" formControlName="zipcode">
+            <input type="text" [(ngModel)]="user.address.zipcode" class="form-control" id="zipcodeInput" placeholder="Zipcode" formControlName="zipcode">
           </div>
           
         </fieldset>

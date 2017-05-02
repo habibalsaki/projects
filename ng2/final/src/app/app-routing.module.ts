@@ -10,6 +10,7 @@ import {PostComponent} from './post/post.component';
 
 
 const routes: Route[] = [
+    {path: 'user/:id', component: CreateUserComponent, canDeactivate: [HasUnsavedData]},
     {path: 'user', component: UserComponent},
     {path: 'user/create', component: CreateUserComponent, canDeactivate: [HasUnsavedData]},
     {path: 'post', component: PostComponent},

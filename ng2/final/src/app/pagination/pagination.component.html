@@ -1,0 +1,17 @@
+<nav aria-label="">
+  <ul class="pagination">
+    <li [class.disabled]="currentPage == 1" (click)="showPagedPosts(currentPage-1)">
+      <span>
+        <span aria-hidden="true">&laquo;</span>
+      </span>
+    </li>
+    <li [class.active]="currentPage == page" (click)="showPagedPosts(page)" *ngFor="let page of pages">
+      <span>{{page}}</span>
+    </li>
+    <li [class.disabled]="currentPage == pages.length" (click)="showPagedPosts(currentPage+1)">
+      <span>
+        <span aria-hidden="true">&raquo;</span>
+      </span>
+    </li>
+  </ul>
+</nav>

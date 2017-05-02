@@ -8,7 +8,7 @@ export class ValidationService {
 
   cannotBeSmallerThanFiveChars(control: FormControl){
     
-    if(control.value.length < 5){
+    if(control.value && control.value.length < 5){
       return {cannotBeSmallerThanFiveChars: true}
     }
 

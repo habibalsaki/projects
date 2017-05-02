@@ -1,3 +1,4 @@
+import { PostService } from './post/post.service';
 import { UserService } from './user/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,11 @@ import { CreateUserComponent } from './user/create-user/create-user.component';
 
 import { ValidationService } from './validation.service';
 import { HasUnsavedData } from './guards/hasUnsavedData.service';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { CommentComponent } from './comment/comment.component';
+import { CommentService } from './comment/comment.service';
+import { PaginationComponent } from './pagination/pagination.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,10 @@ import { HasUnsavedData } from './guards/hasUnsavedData.service';
     PostComponent,
     HomeComponent,
     NotFoundComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    SpinnerComponent,
+    CommentComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +43,7 @@ import { HasUnsavedData } from './guards/hasUnsavedData.service';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [UserService, ValidationService, HasUnsavedData],
+  providers: [UserService, PostService, CommentService, ValidationService, HasUnsavedData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
