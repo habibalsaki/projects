@@ -1,0 +1,30 @@
+<form>
+  <h3>Adding a New Vehicle</h3><hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <label for="makes">Makes</label>
+        <select name="make" id="makes" class="form-control" 
+          (change)="onVehicleChange()" [(ngModel)]="vehicles.make">
+          <option value=""></option>
+          <option *ngFor="let m of makes" value="{{ m.id }}">{{ m.name }}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="models">Models</label>
+        <select name="models" id="models" class="form-control">
+          <option value=""></option>
+          <option *ngFor="let m of models" value="{{ m.id }}">{{ m.name }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>Features</h3><hr>
+    <div class="checkbox" *ngFor="let f of features">
+      <label for="feature{{f.id}}">
+        <input type="checkbox" id="feature{{f.id}}">{{ f.name }}
+      </label>
+    </div>
+  </div>
+</form>
