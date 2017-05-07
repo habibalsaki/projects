@@ -3,3 +3,7 @@
 </h1>
 <hr>
 <app-intro></app-intro>
+<p *ngIf="serverName; else notInIf">Server Found</p>
+<ng-template #notInIf>
+  <p>No Server was found</p>
+</ng-template>
