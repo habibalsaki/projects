@@ -15,6 +15,8 @@ namespace Vidly
         
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<MembershipType> MembershipType { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Genre> Genre { get; set; }
     }
 
     //public class MyEntity

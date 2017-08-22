@@ -67,3 +67,12 @@ E:\projects\aspnetmvc\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
 E:\projects\aspnetmvc\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
 E:\projects\aspnetmvc\Vidly\Vidly\bin\System.Web.Http.xml
 E:\projects\aspnetmvc\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.addingNametoMembership.resources
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.addingFewTables.resources
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.addingDataToMembershipType.resources
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddingBirthdateToCustomer.resources
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddingGenre.resources
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddingGenre1.resources
+E:\projects\aspnetmvc\Vidly\Vidly\obj\Debug\Vidly.Migrations.addingGenreValue.resources
+E:\projects\aspnetmvc\Vidly\Vidly\bin\AutoMapper.dll
+E:\projects\aspnetmvc\Vidly\Vidly\bin\AutoMapper.xml
