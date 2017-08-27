@@ -1,3 +1,5 @@
+import { CanDeactivate } from '@angular/router';
+import { canDeactivateInterface } from './../candeactive.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
-export class PostsComponent implements OnInit {
+export class PostsComponent implements OnInit, canDeactivateInterface {
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  canDeactivate(){
+    return confirm("do you want to leave?");
   }
 
 }
