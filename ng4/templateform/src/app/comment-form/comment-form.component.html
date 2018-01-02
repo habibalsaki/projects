@@ -1,0 +1,21 @@
+<form #f="ngForm" (ngSubmit)="onFormSubmit(f)" >
+  <div class="container">
+    <div class="form-group">
+      <label for="firstname">Firstname</label>
+      <input type="text" required name="firstname" ngModel minlength="3" pattern="banana" #firstname="ngModel" (change)="log(firstname)"
+        id="firstname" class="form-control">
+      <div class="alert alert-danger" *ngIf="firstname.touched && !firstname.valid">
+        <div *ngIf="firstname.errors.required">Firstname is required</div>
+        <div *ngIf="firstname.errors.minlength">Firstname should be {{ firstname.errors.minlength.requiredLength }} characters long</div>
+        <div *ngIf="firstname.errors.pattern">Firstname is not valid by set patterns</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea id="comment" name="comment" ngModel cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+
+    <!-- In case of dropdown issues and want to send whole object rather than value only, use ngValue instead of value (attribute) -->
+  </div>
+</form>

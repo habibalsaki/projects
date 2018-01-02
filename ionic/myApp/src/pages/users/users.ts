@@ -1,13 +1,14 @@
 import { UserPage } from './user/user';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 
 /**
  * Generated class for the UsersPage page.
  *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
+
 @IonicPage()
 @Component({
   selector: 'page-users',
@@ -15,18 +16,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class UsersPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UsersPage');
+  onDataLoad(name: string){
+    this.navCtrl.push(UserPage, {username: name});
   }
-
-  onLoadUser(name: string){
-    this.navCtrl.push(UserPage, {username: name}, {
-      direction: 'back',
-      duration: 2000,
-      easing: 'ease-out'
-    });
-  }
+  
 }

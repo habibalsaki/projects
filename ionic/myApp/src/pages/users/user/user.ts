@@ -1,31 +1,33 @@
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the UsersPage page.
+ * Generated class for the UserPage page.
  *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
   selector: 'page-user',
   templateUrl: 'user.html',
 })
 export class UserPage implements OnInit{
-  private name: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  name: string;
+
+  constructor(
+    public navParams: NavParams, 
+    public navCtrl: NavController) {
   }
 
   ngOnInit(){
-    this.name = this.navParams.get('username');
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UsersPage');
+   this.name = this.navParams.get('username');
   }
 
-  onConfirm(){
+  goToFirstPage(){
+    // this.navCtrl.pop() => going back to previous page
     this.navCtrl.popToRoot();
   }
-
+  
 }

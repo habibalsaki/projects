@@ -1,0 +1,10 @@
+/home/hsaki/Desktop/projects/hello/bin/Debug/netcoreapp2.0/hello.deps.json
+/home/hsaki/Desktop/projects/hello/bin/Debug/netcoreapp2.0/hello.runtimeconfig.json
+/home/hsaki/Desktop/projects/hello/bin/Debug/netcoreapp2.0/hello.runtimeconfig.dev.json
+/home/hsaki/Desktop/projects/hello/bin/Debug/netcoreapp2.0/hello.dll
+/home/hsaki/Desktop/projects/hello/bin/Debug/netcoreapp2.0/hello.pdb
+/home/hsaki/Desktop/projects/hello/obj/Debug/netcoreapp2.0/hello.csproj.CoreCompileInputs.cache
+/home/hsaki/Desktop/projects/hello/obj/Debug/netcoreapp2.0/hello.AssemblyInfoInputs.cache
+/home/hsaki/Desktop/projects/hello/obj/Debug/netcoreapp2.0/hello.AssemblyInfo.cs
+/home/hsaki/Desktop/projects/hello/obj/Debug/netcoreapp2.0/hello.dll
+/home/hsaki/Desktop/projects/hello/obj/Debug/netcoreapp2.0/hello.pdb

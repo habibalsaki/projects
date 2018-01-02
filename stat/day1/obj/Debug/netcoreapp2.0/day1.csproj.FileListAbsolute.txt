@@ -1,0 +1,10 @@
+/home/hsaki/Desktop/projects/stat/day1/bin/Debug/netcoreapp2.0/day1.deps.json
+/home/hsaki/Desktop/projects/stat/day1/bin/Debug/netcoreapp2.0/day1.runtimeconfig.json
+/home/hsaki/Desktop/projects/stat/day1/bin/Debug/netcoreapp2.0/day1.runtimeconfig.dev.json
+/home/hsaki/Desktop/projects/stat/day1/bin/Debug/netcoreapp2.0/day1.dll
+/home/hsaki/Desktop/projects/stat/day1/bin/Debug/netcoreapp2.0/day1.pdb
+/home/hsaki/Desktop/projects/stat/day1/obj/Debug/netcoreapp2.0/day1.csproj.CoreCompileInputs.cache
+/home/hsaki/Desktop/projects/stat/day1/obj/Debug/netcoreapp2.0/day1.AssemblyInfoInputs.cache
+/home/hsaki/Desktop/projects/stat/day1/obj/Debug/netcoreapp2.0/day1.AssemblyInfo.cs
+/home/hsaki/Desktop/projects/stat/day1/obj/Debug/netcoreapp2.0/day1.dll
+/home/hsaki/Desktop/projects/stat/day1/obj/Debug/netcoreapp2.0/day1.pdb

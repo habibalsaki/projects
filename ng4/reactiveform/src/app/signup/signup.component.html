@@ -1,0 +1,19 @@
+<form [formGroup]="form">
+  <div class="username">
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+    <div *ngIf="username.touched && !username.valid">
+      <div *ngIf="username.errors.required">Username is required</div>
+      <div *ngIf="username.errors.cannotContainSpace">Username cannot contain space</div>
+      <div *ngIf="username.errors.shouldBeUnique">Username already exists</div>
+    </div>
+  </div>
+  <div class="email">
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email">
+    <div *ngIf="email.touched && !email.valid">Email is required</div>
+  </div>
+  <div class="button">
+    <button>Signup</button>
+  </div>
+</form>

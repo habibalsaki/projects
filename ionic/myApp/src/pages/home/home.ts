@@ -1,3 +1,4 @@
+import { ShopPage } from './../shop/shop';
 import { UsersPage } from './../users/users';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -12,8 +13,12 @@ export class HomePage {
 
   }
 
-  goToUsersPage(){
+  goToUsers(){
     this.navCtrl.push(UsersPage);
+  }
+
+  goToShop(){
+    this.navCtrl.push(ShopPage);
   }
 
 }
